@@ -1,0 +1,25 @@
+<mat-card class="datecard" fxLayout="row wrap">
+  <div>
+    <label>Date: {{ presentDate }}</label>
+  </div>
+</mat-card>
+<mat-card class="card" fxLayout="row wrap">
+  <div>
+    <label>Select who ever are present:</label>
+  </div>
+  <div>
+    <mat-checkbox color="primary" [checked]="allSelected" [indeterminate]="someChecked()" (change)="setAll($event.checked)"
+      >Select All</mat-checkbox
+    >
+    <ul style="list-style-type: none">
+      <li *ngFor="let person of people">
+        <mat-checkbox
+          color="primary"
+          [checked]="person.checked"
+          (change)="updateAll($event.checked)"
+          >{{ person.name }}</mat-checkbox
+        >
+      </li>
+    </ul>
+  </div>
+</mat-card>
