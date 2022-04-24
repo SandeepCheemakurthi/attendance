@@ -1,9 +1,27 @@
-.pageCenter{
-  margin-top:35%;
+button{
+  background-color: #1e80c1;
+  border: none;
+  color: white;
+  padding: 20px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: #0a2acd;
+  color: white;
 }
 .equalDistances{
   margin-bottom:1rem;
+}
+.pageCenter{
+  margin-top:35%;
+  text-align: center;
 }
 .card {
   width:20%;
@@ -24,22 +42,4 @@
     margin-left: 18%;
     top:28%
   }
-}
-button{
-  background-color: #1e80c1;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12px;
-  transition-duration: 0.4s;
-}
-button:hover {
-  background-color: #0a2acd;
-  color: white;
 }

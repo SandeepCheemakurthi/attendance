@@ -1,0 +1,67 @@
+.equalDistances{
+  margin-bottom:1rem;
+}
+.pageCenter{
+  margin-top:10%;
+  text-align: center;
+}
+.card {
+  top:25%;
+  width:30%;
+  margin-left: 30%;
+}
+.row{
+  margin-left: 15%;
+}
+.heading{
+  width:50%;
+  left:20%;
+  top:5%;
+  text-align: center;
+}
+@media (max-device-width: 480px) {  /* Smart phone */
+  .pageCenter{
+    margin-top:75%;
+    text-align: center;
+  }
+  .card {
+    width:70%;
+    margin: 10px;
+    margin-top:0%;
+    margin-left: 13%;
+    top:28%
+  }
+  .row{
+    margin: 0%;
+    margin-left: 3%;
+  }
+}
+/*@media (max-device-width: 1620px) {   /* IPAD
+  .pageCenter{
+    margin-top:75%;
+    text-align: center;
+  }
+  .card {
+    width:50%;
+    margin: 10px;
+    margin-top:0%;
+    margin-left: 25%;
+    top:28%
+  }
+  .row{
+    margin-left: 13%;
+  }
+}*/
+label{
+  margin-bottom:0
+}
+*{
+  box-sizing: content-box;
+}
+.button{
+  margin-top:3%;
+  text-align:center;
+}
+.errors{
+  color:red;
+}

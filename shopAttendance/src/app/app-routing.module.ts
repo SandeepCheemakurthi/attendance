@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './core/components/landing/landing.component';
+import { SignupComponent } from './core/components/signup/signup.component';
 
 const routes: Routes = [
   {
     path:'',
-    component: LandingComponent
+    component: SignupComponent
   },
   {
     path:'todayAttendance',

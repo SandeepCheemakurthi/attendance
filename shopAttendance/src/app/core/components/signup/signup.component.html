@@ -1,0 +1,58 @@
+<mat-card class="heading">
+  <h2><strong>Sign Up</strong></h2>
+</mat-card>
+
+<mat-card class="card">
+  <form [formGroup]="detailsForm" (ngSubmit)="registerShop()">
+    <div class="row col-8">
+      <div class="row">
+        <div class="col-6">
+          <label><strong>Name</strong></label>
+          <input type="text" [formControlName]="'NAME'" />
+        </div>
+        <div class="col-6 errors" *ngIf="detailsForm.controls['NAME']?.errors?.required && detailsForm.controls['NAME']?.touched">
+          <label><strong>Name is Required</strong></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label><strong>Email</strong></label>
+          <input type="email" [formControlName]="'EMAIL'" />
+        </div>
+        <div class="col-6 errors" *ngIf="detailsForm.controls['EMAIL']?.errors?.required && detailsForm.controls['EMAIL']?.touched">
+          <label><strong>Email is Required</strong></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label><strong>Phone Number</strong></label>
+          <input type="text" maxlength="10" [formControlName]="'PHONE_NUM'"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+        </div>
+        <div class="col-8 errors" *ngIf="detailsForm.controls['PHONE_NUM']?.errors?.required && detailsForm.controls['PHONE_NUM']?.touched">
+          <label><strong>Phone Number is Required</strong></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label><strong>Password</strong></label>
+          <input type="password" [formControlName]="'PASSWORD'" />
+        </div>
+        <div class="col-6 errors" *ngIf="detailsForm.controls['PASSWORD']?.errors?.required && detailsForm.controls['PASSWORD']?.touched">
+          <label><strong>Password is Required</strong></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label><strong>Shop Name</strong></label>
+          <input type="text" [formControlName]="'SHOP_NAME'" />
+        </div>
+        <div class="col-8 errors" *ngIf="detailsForm.controls['SHOP_NAME']?.errors?.required && detailsForm.controls['SHOP_NAME']?.touched">
+          <label><strong>Shop Name is Required</strong></label>
+        </div>
+      </div>
+    </div>
+    <div class="button">
+        <button class="btn btn-primary" type="submit" [disabled]="disableButton">Sign Up</button>
+    </div>
+  </form>
+</mat-card>
